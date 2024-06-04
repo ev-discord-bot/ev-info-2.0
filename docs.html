@@ -1,0 +1,306 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+      <link rel="shortcut icon" type="image/x-icon" href="img/logo_icon.png">
+      <link rel="icon" href="img/logo_icon.png" type="image/x-icon">
+      <title>iminthebibleson | Ev.io Docs</title>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="src/styles.css">
+      <style>
+         body {background: linear-gradient(200deg, #1e2124 30%, #424549 100%); background-size: 200% 200%; animation: gradientAnimation 10s infinite alternate;}
+         @keyframes gradientAnimation{0%{background-position: 0% 50%;}100%{background-position: 100% 50%;}}
+         ::-webkit-scrollbar {display: none;}
+         * {scrollbar-width: none; -ms-overflow-style: none; user-select: none;}
+         #popup {transition: opacity 0.3s ease, transform 0.3s ease;}
+         #popup.hidden {opacity: 0;transform: translateY(-20px);}
+         .overlay {height: 0%; width: 100%; position: fixed; z-index: 1; top: 0; left: 0; overflow-y: hidden; transition: 0.6s;}
+         .overlay-content {position: relative; top: 10; width: 100%; text-align: center; margin-top: 30px;}
+         .overlay a {padding: 8px; text-decoration: none; color: #818181; display: block; transition: 0.3s;}
+         .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
+         .overlay .closebtn {position: absolute; top: 15px; right: 40px; font-size: 40px;}
+         @media screen and (max-height: 450px) {.overlay {overflow-y: auto;} .overlay a {font-size: 20px} .overlay .closebtn { font-size: 40px; top: 15px; right: 35px;}}
+         .tooltip .tooltiptext {visibility: hidden; width: 120px; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; top: 150%; left: 50%; margin-left: -60px; opacity: 0; transition: opacity 0.5s ease-in-out;}
+         .tooltip:hover .tooltiptext {visibility: visible; opacity: 1;}
+      </style>
+   </head>
+   <body>
+      <div class="fixed bottom-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+         <div class="shadow-lg rounded-lg p-1">
+            <p>
+               If there is any bugs or any suggestions, please contact me. | Discord: 
+               <spam class="select-all text-base underline decoration-[#7289da]">gio.the.dog</spam>
+            </p>
+         </div>
+      </div>
+      <div class="fixed top-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+         <div class="backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg p-1 hover:bg-neutral-900">
+            <p>
+               <span style="cursor:pointer" onclick="openNav();" onmouseover="hoverIcon(this); resetIcon(this);" class="tooltip">
+               <i id="menuIcon" class="fa-solid fa-bars"></i> Guides and tips on playing ev.io
+               <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">click to open</span>
+               </span>
+            </p>
+         </div>
+      </div>
+      <div id="myNav" class="overlay text-2xl bg-zinc-950 bg-opacity-50 backdrop-blur-lg">
+         <a class="closebtn" onclick="closeNav();"><i class="fa-solid fa-xmark"></i></a>
+         <div class="overlay-content">
+            <div class="flex items-center justify-center font-semibold text-4xl">
+               Tips and Guides from Xen0‎ ‎ 
+               <div class="grid place-items-center"><img src="img/xen0.png" class="size-11 rounded-2xl drop-shadow-2xl backdrop-brightness-50 shadow-lg shadow-black"></div>
+            </div>
+            <div class="flex items-center justify-center p-8">
+               had to skip over thing he said he was busy, and also asked bicboiii but got ghosted basically 
+            </div>
+            <hr>
+               <div class="w-full mt-[-150px] p-2 scale-[0.6]">
+               <h1 class="text-3xl font-bold mb-4">What is ev.io?</h1>
+               <p class="mb-4">ev.io is a free, browser-based first-person shooter game that you can play without needing to download anything. Just open your web browser, go to the game's website, and start playing. It's set in a futuristic world with various maps and weapons, offering exciting and fast-paced gameplay.</p>
+               <h2 class="text-2xl font-semibold mb-2">How Does Earning Money Work in ev.io?</h2>
+               <p class="mb-4">In ev.io, you can earn cryptocurrency tokens while playing the game. Here's a simple breakdown of how it works:</p>
+               <ol class="list-decimal list-inside mb-4">
+                  <li class="mb-2"><span class="font-semibold">Sign Up and Play</span>: First, you need to create an account and start playing the game. You can play different game modes, such as deathmatches or team battles.</li>
+                  <li class="mb-2"><span class="font-semibold">Earn Rewards</span>: As you play, you'll earn in-game points based on your performance. These points can be converted into cryptocurrency tokens. The better you play, the more points you earn.</li>
+                  <li class="mb-2"><span class="font-semibold">Link to Crypto Wallet</span>: To receive your earnings, you'll need to link your account to a cryptocurrency wallet. This is where your tokens will be sent. If you don't have a wallet, you can create one easily online.</li>
+                  <li class="mb-2"><span class="font-semibold">Withdraw Tokens</span>: Once you have enough tokens, you can withdraw them to your wallet. These tokens can then be traded or sold on various cryptocurrency exchanges for real money.</li>
+               </ol>
+               <h2 class="text-2xl font-semibold mb-2">Why Play ev.io?</h2>
+               <ul class="list-disc list-inside mb-4">
+                  <li class="mb-2"><span class="font-semibold">Fun and Fast-Paced</span>: Enjoy exciting and competitive gameplay with friends or other players online.</li>
+                  <li class="mb-2"><span class="font-semibold">No Downloads Needed</span>: Play instantly in your browser without any installations.</li>
+                  <li class="mb-2"><span class="font-semibold">Earn While Playing</span>: Get rewarded for your skills and time with cryptocurrency tokens.</li>
+               </ul>
+               <p>If you're looking for a fun game where you can also make some money, give ev.io a try!</p>
+            </div>
+         </div>
+      </div>
+      <div class="row-auto">
+         <div class="flex items-center justify-center h-screen">
+            <div class="drop-shadow-2xl backdrop-brightness-50 rounded-lg w-5/6 max-w-5/6 h-5/6 max-h-5/6 p-6 flex flex-col shadow-lg shadow-[#7289da]">
+               <div class="flex-1 flex">
+                  <div class="w-1/6 mr-4">
+                     <div class="backdrop-sepia-0 shadow-lg shadow-black rounded-lg p-2 h-[78vh] overflow-y-auto" style="overflow-x: hidden;">
+                        <img src="img/icon.png">
+                        <hr class="w-full my-4">
+                        <ul class="flex justify-center gap-x-3 select-none my-4 text-base normal-case">
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="index.html" class="text-center"><i class="fa-solid fa-home"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Home</span></span>
+                           <li>
+                              <a class="text-center">| </a>
+                           </li>
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="crosshairs.html" class="text-center"><i class="fa-solid fa-crosshairs"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Crosshair</span></span>
+                           </li>
+                           <li>
+                              <a class="text-center">| </a>
+                           </li>
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="uisettings.html" class="text-center"><i class="fa-solid fa-display"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Settings/UIMod</span></span>
+                           </li>
+                           <a class="text-center">| </a>
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="gallery.html" class="text-center"><i class="fa-regular fa-images"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Sgt. Fugazi Galley</span></span>
+                           </li>
+                        </ul>
+                        <hr class="w-full my-2">
+                        <ul class=" truncate text-left leading-8 text-base">
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://ev.io" class=""><span class="inline-flex items-center"><img src="img/ev_icon.png" class="w-4 h-4 mr-1">| Play Ev.io</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://ev.io/info" class=""><span class="inline-flex items-center"><img src="img/ev_icon.png" class="w-4 h-4 mr-1">| Ev.io Info</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://ev.io/user/login" class=""><span class="inline-flex items-center"><img src="img/ev_icon.png" class="w-4 h-4 mr-1">| Your Ev.io Account</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://arideve.github.io/ev-skin-viewer/" class=""><span class="inline-flex items-center"><img src="img/ari_icon.png" class="w-4 h-4 mr-1">| Ari's Skin Viewer</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://crosshair.themeta.gg/" class=""><span class="inline-flex items-center"><img src="img/themeta_icon.png" class="w-4 h-4 mr-1">| Kovaak's CG</span></a></button></li>
+                        </ul>
+                        <hr class="w-full my-2">
+                        <ul class="text-left leading-8 text-base">
+                           <li>
+                              <a href="https://twitter.com/iminthebibleson" class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]" target="_blank">
+                              <span><i class="fa-brands fa-twitter"></i> | Twitter</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://discord.gg/WMThD52Dz" class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Discord Server</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/iminthebibleson" class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]" target="_blank">
+                              <span><i class="fa-brands fa-github"></i> | Github</span>
+                              </a>
+                           </li>
+                        </ul>
+                        <hr class="w-full my-2 p-1">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/solana-sol-logo.png" class="size-28">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">Donate to me if you can. It will greatly benefit me. Anything is welcome, of course.</h3>
+                           <hr class="w-full my-2">
+                           <p class="text-center select-all text-xs">3JEWbC33yrHfUKLJQxFhpB<br>eLdD7H5LkoBus49F2zaRsa</p>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/helper_bot_logo.png" class="size-28 rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">An inspiration and rebuild of the Ev.io Clan Helper an unofficial ev.io bot for clans!<br>(Clan management tools coming soon)<br><br><em>Note: This is still in beta, will be an few bugs</em></h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center scale-[0.80]">
+                              <a href="https://discord.com/oauth2/authorize?client_id=1212440273347420180&permissions=2147551296&scope=bot+applications.commands" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px hover:bg-neutral-900" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Invite Bot</span>
+                              </a>
+                           </div>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:text-[#1e2124] hover:shadow-white hover:bg-transparent" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/Roycemarketbanner.gif" class="size-28 rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">Unlock Exclusive Deals and Community Benefits! 🌟 Join our Discord community for unbeatable discounts on products and subscriptions. With over $100+ in sales so far!</h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center gap-x-2 scale-[0.80]">
+                              <a href="https://roycemarket.mysellix.io/" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px" target="_blank">
+                              <span><i class="fa-solid fa-link"></i> | Website</span>
+                              </a>
+                              <a href="https://discord.gg/et76cZUD9C" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Server</span>
+                              </a>
+                           </div>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/ev_bot_logo.svg" class="size-28 rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">Try out my Discord bot on your Discord server.</h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center scale-[0.80]">
+                              <a href="https://discord.com/api/oauth2/authorize?client_id=1072538244572516462&permissions=139586825280&scope=bot%20applications.commands" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px hover:bg-neutral-900" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Invite Bot</span>
+                              </a>
+                           </div>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/potion_swap_pfp.png" class="size-28 h-auto rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">try out potionswap's no KYC features by inviting the discord bot below!</h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center scale-[0.80]">
+                              <a href="https://discord.com/api/oauth2/authorize?client_id=1175511291880812594&permissions=0&scope=applications.commands%20bot" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px hover:bg-neutral-900" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Invite Bot</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="backdrop-sepia-0 shadow-lg shadow-black rounded-lg h-[78vh] overflow-y-auto p-6 text-lg w-5/6" style="overflow-x: hidden;">
+                     <div class="relative">
+                        <!-- Header -->
+                        <div class="h-16 w-full backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg flex items-center justify-between hover:bg-neutral-900" style="animation: shadowAnimation 2s infinite;">
+                           <div class="text-4xl font-bold p-4  bg-clip-text text-transparent bg-[#a6adba] ">Docs</div>
+                           <div class="flex items-center relative">
+                              <div class="text-lg font-semibold text-center leading-5">Version<br>3.9.0 Deluxe</div>
+                              <button id="notificationButton" class="focus:outline-none p-1 ml-4">
+                              <i class="fa-solid fa-bell"></i>
+                              </button>
+                              <img src="img/profile_photo.png" alt="Image" class="w-[65px] h-auto rounded-full p-4" onclick="playAudio();">
+                           </div>
+                        </div>
+                        <!-- Popup -->
+                        <div id="popup" class="fixed top-0 right-0 mt-2 bg-gradient-to-tr from-[#1e2124] to-[#424549] rounded-lg shadow-lg hidden size-80 z-50">
+                           <div class="p-4">
+                              <button id="closeButton" class="absolute top-0 right-0 p-2 focus:outline-none">
+                              <i class="fa-solid fa-times"></i>
+                              </button>
+                              <div class="text-lg font-semibold text-center mb-4">Updates</div>
+                              <div class="grid grid-cols-1 gap-2">
+                                 <!-- Update Item -->
+                                 <div class="w-full h-16 backdrop-sepia-0 shadow-lg shadow-black rounded-lg">
+                                    <div class="text-base font-normal p-4 flex items-center justify-center">
+                                       <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>
+                                       <p>Magic... whole new layout</p>
+                                    </div>
+                                 </div>
+                                 <!-- End Update Item -->
+                                 <!-- Update Item -->
+                                 <div class="w-full h-16 backdrop-sepia-0 shadow-lg shadow-black rounded-lg">
+                                    <div class="text-base font-normal p-4 flex items-center justify-center">
+                                       <i class="fa-solid fa-poo mr-2"></i>
+                                       <p class="text-center">Sadly no rickrolls <em>(yet)</em></p>
+                                    </div>
+                                 </div>
+                                 <!-- End Update Item -->
+                                 <!-- Update Item -->
+                                 <div class="w-full h-16 backdrop-sepia-0 shadow-lg shadow-black rounded-lg">
+                                    <div class="text-base font-normal p-4 flex items-center justify-center">
+                                       <i class="fa-solid fa-fire"></i>
+                                       <p class="text-center"> Im very proud of myself now lol</p>
+                                    </div>
+                                 </div>
+                                 <!-- End Update Item -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-4"></div>
+                     <!-- Main Content -->
+                     <div class="f-full w-full backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg items-center justify-between p-4 hover:bg-neutral-900" style="animation: shadowAnimation 2s infinite;">
+                        <p class="text-3xl font-bold bg-clip-text text-transparent bg-[#a6adba]">Quick Urls</p>
+                        <p class="mb-4"><em>At the moment its not been programmed yet due to the short time.</em></p>
+                        <hr class="w-full my-2">
+                        <p class="text-3xl font-bold bg-clip-text text-transparent bg-[#a6adba]">APIs I've Used</p>
+                        <p>This is a list of apis I've used for websites and other purposes in order to help others get started coding with evio-related api's.</p>
+                        <div class="py-2">
+                           <h3 class="font-bold"><i class="fa-solid fa-cloud""></i> Request</h3>
+                           <p>User stats lookup</p>
+                        </div>
+                        <code class="language-uri bg-neutral-900 rounded-lg p-1 select-all">https://ev.io/stats-by-un/{username}</code><a class="px-3">|</a><code class="language-uri bg-neutral-900 rounded-lg p-1 select-all">https://ev.io/user/{user_id}?_format=json	</code>
+                        <div class="py-2"></div>
+                        <hr class="w-full my-2">
+                        <div class="py-2">
+                           <h3 class="font-bold"><i class="fa-solid fa-cloud" ></i> Request</h3>
+                           <p>Nft Info lookup</p>
+                        </div>
+                        <code class="language-uri bg-neutral-900 rounded-lg p-1 select-all">https://ev.io/get-nft-flags/{nft_id}</code>
+                        <div class="flex p-1"></div>
+                        <hr class="w-full my-2">
+                        <div class="py-2">
+                           <h3 class="font-bold"><i class="fa-solid fa-cloud""></i> Request</h3>
+                           <p>crytno prices | Learn more at: <a href="https://www.coingecko.com/en/api" target="_blank" class="text-neutral-500">https://www.coingecko.com/en/api</a></p>
+                        </div>
+                        <code class="language-uri bg-neutral-900 rounded-lg p-1 select-all" id="truncate-js">https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd%2Cinr%2Cbdt%2Cphp%2Cbrl%2Cmyr%2Caud&include_market_cap=false&include_24hr_vol=false&include_24hr_change=true&include_last_updated_at=true&precision=2</code>
+                        <hr class="w-full my-2">
+                        <div class="py-2">
+                           <h3 class="font-bold">Evio APIs</h3>
+                           <p>learn more about evio api's here: <a href="https://ev.io/developer-api" class="text-neutral-500">https://ev.io/developer-api</a></p>
+                        </div>
+                        <hr class="w-full my-2">
+                        <div class="py-2">
+                           <h3 class="font-bold">Formatted Code</h3>
+                           <p>Go on to <a href="https://jsonformatter.org" target="_blank" class="text-neutral-500">https://jsonformatter.org</a> and simply copy and paste the json code above to format it<br>(makes it more simpler to read in my opinion)</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <script src="main_functions/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-json.min.js"></script>
+   </body>
+</html>

@@ -1,0 +1,1604 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=0.9" />
+      <link rel="shortcut icon" type="image/x-icon" href="img/logo_icon.png">
+      <link rel="icon" href="img/logo_icon.png" type="image/x-icon">
+      <title>iminthebibleson | Ev.io Crosshairs</title>
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="src/styles.css">
+      <style>
+         body {background: linear-gradient(200deg, #1e2124 30%, #424549 100%); background-size: 200% 200%; animation: gradientAnimation 10s infinite alternate;}
+         @keyframes gradientAnimation{0%{background-position: 0% 50%;}100%{background-position: 100% 50%;}}
+         ::-webkit-scrollbar {display: none;}
+         * {scrollbar-width: none; -ms-overflow-style: none; user-select: none;}
+         #popup {transition: opacity 0.3s ease, transform 0.3s ease;}
+         #popup.hidden {opacity: 0;transform: translateY(-20px);}
+         .overlay {height: 0%; width: 100%; position: fixed; z-index: 1; top: 0; left: 0; overflow-y: hidden; transition: 0.6s;}
+         .overlay-content {position: relative; top: 10; width: 100%; text-align: center; margin-top: 30px;}
+         .overlay a {padding: 8px; text-decoration: none; color: #818181; display: block; transition: 0.3s;}
+         .overlay a:hover, .overlay a:focus {color: #f1f1f1;}
+         .overlay .closebtn {position: absolute; top: 15px; right: 40px; font-size: 40px;}
+         @media screen and (max-height: 450px) {.overlay {overflow-y: auto;} .overlay a {font-size: 20px} .overlay .closebtn { font-size: 40px; top: 15px; right: 35px;}}
+         .tooltip .tooltiptext {visibility: hidden; width: 120px; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; z-index: 1; top: 150%; left: 50%; margin-left: -60px; opacity: 0; transition: opacity 0.5s ease-in-out;}
+         .tooltip:hover .tooltiptext {visibility: visible; opacity: 1;}
+         body {scroll-behavior: smooth;}
+         #scroll-container {scroll-behavior: smooth; -webkit-overflow-scrolling: touch;}
+         .cursor-grab {cursor: grab;}
+         .cursor-grabbing {cursor: grabbing;}
+      </style>
+   </head>
+   <body>
+      <div class="fixed bottom-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+         <div class="shadow-lg rounded-lg p-1">
+            <p>
+               If there is any bugs or any suggestions, please contact me. | Discord: 
+               <spam class="select-all text-base underline decoration-[#7289da]">gio.the.dog</spam>
+            </p>
+         </div>
+      </div>
+      <div class="fixed top-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+         <div class="backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg p-1 hover:bg-neutral-900">
+            <p>
+               <span style="cursor:pointer" onclick="openNav();" onmouseover="hoverIcon(this); resetIcon(this);" class="tooltip">
+               <i id="menuIcon" class="fa-solid fa-bars"></i> Guides and tips on playing ev.io
+               <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">click to open</span>
+               </span>
+            </p>
+         </div>
+      </div>
+      <div id="myNav" class="overlay text-2xl bg-zinc-950 bg-opacity-50 backdrop-blur-lg">
+         <a class="closebtn" onclick="closeNav();"><i class="fa-solid fa-xmark"></i></a>
+         <div class="overlay-content">
+            <div class="flex items-center justify-center font-semibold text-4xl">
+               Tips and Guides from Xen0‎ ‎ 
+               <div class="grid place-items-center"><img src="img/xen0.png" class="size-11 rounded-2xl drop-shadow-2xl backdrop-brightness-50 shadow-lg shadow-black"></div>
+            </div>
+            <div class="flex items-center justify-center p-8">
+               had to skip over thing he said he was busy, and also asked bicboiii but got ghosted basically 
+            </div>
+            <hr>
+            <div class="w-full mt-[-150px] p-2 scale-[0.6]">
+               <h1 class="text-3xl font-bold mb-4">What is ev.io?</h1>
+               <p class="mb-4">ev.io is a free, browser-based first-person shooter game that you can play without needing to download anything. Just open your web browser, go to the game's website, and start playing. It's set in a futuristic world with various maps and weapons, offering exciting and fast-paced gameplay.</p>
+               <h2 class="text-2xl font-semibold mb-2">How Does Earning Money Work in ev.io?</h2>
+               <p class="mb-4">In ev.io, you can earn cryptocurrency tokens while playing the game. Here's a simple breakdown of how it works:</p>
+               <ol class="list-decimal list-inside mb-4">
+                  <li class="mb-2"><span class="font-semibold">Sign Up and Play</span>: First, you need to create an account and start playing the game. You can play different game modes, such as deathmatches or team battles.</li>
+                  <li class="mb-2"><span class="font-semibold">Earn Rewards</span>: As you play, you'll earn in-game points based on your performance. These points can be converted into cryptocurrency tokens. The better you play, the more points you earn.</li>
+                  <li class="mb-2"><span class="font-semibold">Link to Crypto Wallet</span>: To receive your earnings, you'll need to link your account to a cryptocurrency wallet. This is where your tokens will be sent. If you don't have a wallet, you can create one easily online.</li>
+                  <li class="mb-2"><span class="font-semibold">Withdraw Tokens</span>: Once you have enough tokens, you can withdraw them to your wallet. These tokens can then be traded or sold on various cryptocurrency exchanges for real money.</li>
+               </ol>
+               <h2 class="text-2xl font-semibold mb-2">Why Play ev.io?</h2>
+               <ul class="list-disc list-inside mb-4">
+                  <li class="mb-2"><span class="font-semibold">Fun and Fast-Paced</span>: Enjoy exciting and competitive gameplay with friends or other players online.</li>
+                  <li class="mb-2"><span class="font-semibold">No Downloads Needed</span>: Play instantly in your browser without any installations.</li>
+                  <li class="mb-2"><span class="font-semibold">Earn While Playing</span>: Get rewarded for your skills and time with cryptocurrency tokens.</li>
+               </ul>
+               <p>If you're looking for a fun game where you can also make some money, give ev.io a try!</p>
+            </div>
+         </div>
+      </div>
+      <div class="row-auto">
+         <div class="flex items-center justify-center h-screen">
+            <div class="drop-shadow-2xl backdrop-brightness-50 rounded-lg w-5/6 max-w-5/6 h-5/6 max-h-5/6 p-6 flex flex-col shadow-lg shadow-[#7289da]">
+               <div class="flex-1 flex">
+                  <div class="w-1/6 mr-4">
+                     <div class="backdrop-sepia-0 shadow-lg shadow-black rounded-lg p-2 h-[78vh] overflow-y-auto">
+                        <img src="img/icon.png">
+                        <hr class="w-full my-4">
+                        <ul class="flex justify-center gap-x-3 select-none my-4 text-base normal-case">
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="index.html" class="text-center"><i class="fa-solid fa-home"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Home</span></span>
+                           <li>
+                              <a class="text-center">| </a>
+                           </li>
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="docs.html" class="text-center"><i class="fa-solid fa-file"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Docs</span></span>
+                           </li>
+                           <li>
+                              <a class="text-center">| </a>
+                           </li>
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="#" class="text-center"><i class="fa-solid fa-display"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Settings/UIMod</span></span>
+                           </li>
+                           <a class="text-center">| </a>
+                           <li>
+                              <span style="cursor:pointer" class="tooltip">
+                              <a href="crosshairs.html" class="text-center"><i class="fa-solid fa-crosshairs"></i></a>
+                              <span class="tooltiptext bg-zinc-950 bg-opacity-50 backdrop-blur-lg">Crosshairs</span></span>
+                           </li>
+                        </ul>
+                        <hr class="w-full my-2">
+                        <ul class=" truncate text-left leading-8 text-base">
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://ev.io" class=""><span class="inline-flex items-center"><img src="img/ev_icon.png" class="w-4 h-4 mr-1">| Play Ev.io</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://ev.io/info" class=""><span class="inline-flex items-center"><img src="img/ev_icon.png" class="w-4 h-4 mr-1">| Ev.io Info</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://ev.io/user/login" class=""><span class="inline-flex items-center"><img src="img/ev_icon.png" class="w-4 h-4 mr-1">| Your Ev.io Account</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://arideve.github.io/ev-skin-viewer/" class=""><span class="inline-flex items-center"><img src="img/ari_icon.png" class="w-4 h-4 mr-1">| Ari's Skin Viewer</span></a></button></li>
+                           <li><button class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]"><a href="https://crosshair.themeta.gg/" class=""><span class="inline-flex items-center"><img src="img/themeta_icon.png" class="w-4 h-4 mr-1">| Kovaak's CG</span></a></button></li>
+                        </ul>
+                        <hr class="w-full my-2">
+                        <ul class="text-left leading-8 text-base">
+                           <li>
+                              <a href="https://twitter.com/iminthebibleson" class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]" target="_blank">
+                              <span><i class="fa-brands fa-twitter"></i> | Twitter</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://discord.gg/WMThD52Dz" class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Discord Server</span>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://github.com/iminthebibleson" class="btn btn-ghost btn-sm text-base normal-case h-2 p-px hover:bg-neutral-900 hover:drop-shadow-lg hover:shadow-[#7289da]" target="_blank">
+                              <span><i class="fa-brands fa-github"></i> | Github</span>
+                              </a>
+                           </li>
+                        </ul>
+                        <hr class="w-full my-2 p-1">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/solana-sol-logo.png" class="size-28">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">Donate to me if you can. It will greatly benefit me. Anything is welcome, of course.</h3>
+                           <hr class="w-full my-2">
+                           <p class="text-center select-all text-xs">3JEWbC33yrHfUKLJQxFhpB<br>eLdD7H5LkoBus49F2zaRsa</p>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/helper_bot_logo.png" class="size-28 rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">An inspiration and rebuild of the Ev.io Clan Helper an unofficial ev.io bot for clans!<br>(Clan management tools coming soon)<br><br><em>Note: This is still in beta, will be an few bugs</em></h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center scale-[0.80]">
+                              <a href="https://discord.com/oauth2/authorize?client_id=1212440273347420180&permissions=2147551296&scope=bot+applications.commands" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px hover:bg-neutral-900" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Invite Bot</span>
+                              </a>
+                           </div>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-gradient-to-r from-[#9945FF] to-[#14F195] hover:text-[#1e2124] hover:shadow-white hover:bg-transparent" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/Roycemarketbanner.gif" class="size-28 rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">Unlock Exclusive Deals and Community Benefits! 🌟 Join our Discord community for unbeatable discounts on products and subscriptions. With over $100+ in sales so far!</h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center gap-x-2 scale-[0.80]">
+                              <a href="https://roycemarket.mysellix.io/" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px" target="_blank">
+                              <span><i class="fa-solid fa-link"></i> | Website</span>
+                              </a>
+                              <a href="https://discord.gg/et76cZUD9C" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Server</span>
+                              </a>
+                           </div>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/ev_bot_logo.svg" class="size-28 rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">Try out my Discord bot on your Discord server.</h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center scale-[0.80]">
+                              <a href="https://discord.com/api/oauth2/authorize?client_id=1072538244572516462&permissions=139586825280&scope=bot%20applications.commands" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px hover:bg-neutral-900" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Invite Bot</span>
+                              </a>
+                           </div>
+                        </div>
+                        <hr class="w-full my-4">
+                        <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                           <div class="grid place-items-center">
+                              <img src="img/potion_swap_pfp.png" class="size-28 h-auto rounded-3xl">
+                           </div>
+                           <h3 class="text-base mb-1 text-center place-content-center">try out potionswap's no KYC features by inviting the discord bot below!</h3>
+                           <hr class="w-full my-2">
+                           <div class="flex justify-center scale-[0.80]">
+                              <a href="https://discord.com/api/oauth2/authorize?client_id=1175511291880812594&permissions=0&scope=applications.commands%20bot" class="btn btn-ghost btn-sm text-base normal-case h-4 p-px hover:bg-neutral-900" target="_blank">
+                              <span><i class="fa-brands fa-discord"></i> | Invite Bot</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="backdrop-sepia-0 shadow-lg shadow-black rounded-lg h-[78vh] overflow-y-auto p-6 text-lg w-5/6">
+                     <div class="relative">
+                        <!-- Header -->
+                        <div class="h-16 w-full backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg flex items-center justify-between hover:bg-neutral-900" style="animation: shadowAnimation 2s infinite;">
+                           <div class="text-4xl font-bold p-4  bg-clip-text text-transparent bg-[#a6adba] ">
+                              Sgt. Fugazi's Galley 
+                              <spam class="text-sm"><em>Thanks fugazi for all of the images and audio</em></spam>
+                           </div>
+                           <div class="flex items-center relative">
+                              <div class="text-lg font-semibold text-center leading-5">Version<br>3.9.0 Deluxe</div>
+                              <button id="notificationButton" class="focus:outline-none p-1 ml-4">
+                              <i class="fa-solid fa-bell"></i>
+                              </button>
+                              <img src="img/fugazi_pfp.webp" alt="Image" class="w-[65px] h-auto rounded-full p-4" onclick="playAudio();">
+                           </div>
+                        </div>
+                        <!-- Popup -->
+                        <div id="popup" class="fixed top-0 right-0 mt-2 bg-gradient-to-tr from-[#1e2124] to-[#424549] rounded-lg shadow-lg hidden size-80 z-50">
+                           <div class="p-4">
+                              <button id="closeButton" class="absolute top-0 right-0 p-2 focus:outline-none">
+                              <i class="fa-solid fa-times"></i>
+                              </button>
+                              <div class="text-lg font-semibold text-center mb-4">Updates</div>
+                              <div class="grid grid-cols-1 gap-2">
+                                 <!-- Update Item -->
+                                 <div class="w-full h-16 backdrop-sepia-0 shadow-lg shadow-black rounded-lg">
+                                    <div class="text-base font-normal p-4 flex items-center justify-center">
+                                       <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>
+                                       <p>Magic... whole new layout</p>
+                                    </div>
+                                 </div>
+                                 <!-- End Update Item -->
+                                 <!-- Update Item -->
+                                 <div class="w-full h-16 backdrop-sepia-0 shadow-lg shadow-black rounded-lg">
+                                    <div class="text-base font-normal p-4 flex items-center justify-center">
+                                       <i class="fa-solid fa-poo mr-2"></i>
+                                       <p class="text-center">Sadly no rickrolls <em>(yet)</em></p>
+                                    </div>
+                                 </div>
+                                 <!-- End Update Item -->
+                                 <!-- Update Item -->
+                                 <div class="w-full h-16 backdrop-sepia-0 shadow-lg shadow-black rounded-lg">
+                                    <div class="text-base font-normal p-4 flex items-center justify-center">
+                                       <i class="fa-solid fa-fire"></i>
+                                       <p class="text-center"> Im very proud of myself now lol</p>
+                                    </div>
+                                 </div>
+                                 <!-- End Update Item -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-4"></div>
+                     <!-- Main Content -->
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto;">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Billboards</h1>
+                        <div id="scroll-container" class="snap-x snap-mandatory overflow-x-auto flex space-x-4 p-2 w-auto cursor-grab" style="overflow-y: hidden;">
+                           <!-- Image 1 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/adventure_game.jpg" alt="Image 1" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/Ancient_Restaurant_menu.jpg" alt="Image 2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 3 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/big_bad_gym.jpg" alt="Image 3" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 4 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/big_brother_.jpg" alt="Image 4" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 5 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_06.jpg" alt="Image 5" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 6 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_07.jpg" alt="Image 6" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 7 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_08.jpg" alt="Image 7" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 8 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_09.jpg" alt="Image 8" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 9 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_10.jpg" alt="Image 9" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 10 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_11.jpg" alt="Image 10" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 11 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_12.jpg" alt="Image 11" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 12 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_13.jpg" alt="Image 12" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 13 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_14.jpg" alt="Image 13" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 14 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_15.jpg" alt="Image 14" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 15 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_16.jpg" alt="Image 15" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 16 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_17.jpg" alt="Image 16" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 17 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_18.jpg" alt="Image 17" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 18 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_19.jpg" alt="Image 18" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 19 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_22.jpg" alt="Image 19" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 20 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_23.jpg" alt="Image 20" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 21 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_25.jpg" alt="Image 21" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 22 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_26.jpg" alt="Image 22" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 23 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_27.jpg" alt="Image 23" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 24 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_28.jpg" alt="Image 24" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 25 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_29.jpg" alt="Image 25" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 26 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_30.jpg" alt="Image 26" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 27 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_31.jpg" alt="Image 27" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 28 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_EVIO_Bludgeon.png" alt="Image 28" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 29 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_EVIO_sex_barrel.png" alt="Image 29" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 30 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_fart.png" alt="Image 30" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 31 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_EVIO_steroid_arm_V2.jpg" alt="Image 31" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 32 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/billboard_nukes.png" alt="Image 32" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 33 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/easy_mode.jpg" alt="Image 33" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 34 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/evio_chess.jpg" alt="Image 34" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 35 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/eviounion.jpg" alt="Image 35" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 36 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/flamethrower.jpg" alt="Image 36" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 37 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/give_up.jpg" alt="Image 37" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 38 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/gypsum.jpg" alt="Image 38" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/helmet.jpg" alt="Image 39" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 40 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/kta.jpg" alt="Image 40" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 41 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/pause_grenade.jpg" alt="Image 41" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 42 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/portal_grenade_5.jpg" alt="Image 42" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 43 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/respect_all_guests.jpg" alt="Image 43" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 44 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/rumble_in_fractal_billboard.jpg" alt="Image 44" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 45 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/slingshots.jpg" alt="Image 45" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 46 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/sunglasses.jpg" alt="Image 46" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 47 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/supergiantbosses.jpg" alt="Image 47" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 48 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/trench.jpg" alt="Image 48" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 49 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/tv.jpg" alt="Image 49" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 50 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/bot_whisperer.jpg" alt="Image 50" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 51 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/billboards/dragon_casino.jpg" alt="Image 51" class="rounded-lg shadow-lg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-2"></div>
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: auto;">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Gypsum Weekly's</h1>
+                        <div id="scroll-container" class="snap-x snap-mandatory overflow-x-auto flex space-x-4 p-2 w-auto h-auto cursor-grab">
+                           <!-- Image 18 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_18.jpg" alt="gypsum 18" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 19 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_19.jpg" alt="gypsum 19" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 20 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_20.jpg" alt="gypsum 20" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 21 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_21.jpg" alt="gypsum 21" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 22 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_22.jpg" alt="gypsum 22" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 23 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_23.jpg" alt="gypsum 23" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 24 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_24.jpg" alt="gypsum 24" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 25 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_25.jpg" alt="gypsum 25" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 26 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_26.jpg" alt="gypsum 26" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 27 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_27.jpg" alt="gypsum 27" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 28 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_28.jpg" alt="gypsum 28" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 29 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_29.jpg" alt="gypsum 29" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 30 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_30.jpg" alt="gypsum 30" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 31 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_31.jpg" alt="gypsum 31" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 32 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_32.jpg" alt="gypsum 32" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 33 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_33.jpg" alt="gypsum 33" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 34 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_34.jpg" alt="gypsum 34" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 35 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_35.jpg" alt="gypsum 35" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 36 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_36.jpg" alt="gypsum 36" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 37 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_37.jpg" alt="gypsum 37" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 38 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_38.jpg" alt="gypsum 38" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_39.jpg" alt="gypsum 39" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39_a -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_39_a.jpg" alt="gypsum 39_a" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39_b -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_39_b.jpg" alt="gypsum 39_b" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39_c -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_39_c.jpg" alt="gypsum 39_c" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 40 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_40.jpg" alt="gypsum 40" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 41 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_41.jpg" alt="gypsum 41" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 42 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_42.jpg" alt="gypsum 42" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 43 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_43.jpg" alt="gypsum 43" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 44 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_44.jpg" alt="gypsum 44" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 44_b -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_44_b.jpg" alt="gypsum 44_b" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 45 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_45.jpg" alt="gypsum 45" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 46 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_46.jpg" alt="gypsum 46" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 47 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_47.jpg" alt="gypsum 47" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 48 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_48.jpg" alt="gypsum 48" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 49 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_49.jpg" alt="gypsum 49" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 50 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_50.jpg" alt="gypsum 50" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 51 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_51.jpg" alt="gypsum 51" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 52 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_52.jpg" alt="gypsum 52" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 53 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_53.jpg" alt="gypsum 53" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 53_alt_cover -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_53_alt cover.jpg" alt="gypsum 53_alt_cover" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 53_alt_cover_2 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_53_alt cover 2.jpg" alt="gypsum 53_alt_cover_2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 54 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_54.jpg" alt="gypsum 54" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 55 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_55.jpg" alt="gypsum 55" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 56 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_56.jpg" alt="gypsum 56" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 57 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_57.jpg" alt="gypsum 57" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 58 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_58.jpg" alt="gypsum 58" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 59 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_59.jpg" alt="gypsum 59" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 60 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_60.jpg" alt="gypsum 60" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 61 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_61.jpg" alt="gypsum 61" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 62 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_62.jpg" alt="gypsum 62" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 63 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_63.jpg" alt="gypsum 63" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 64 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_64.jpg" alt="gypsum 64" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 65 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_65.jpg" alt="gypsum 65" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 66 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_66.jpg" alt="gypsum 66" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 67 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_67.jpg" alt="gypsum 67" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 68 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_68.jpg" alt="gypsum 68" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 69 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_69.jpg" alt="gypsum 69" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 70 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_70.jpg" alt="gypsum 70" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 71 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_71.jpg" alt="gypsum 71" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 72 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_72.jpg" alt="gypsum 72" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 73 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_73.jpg" alt="gypsum 73" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 74 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_74.jpg" alt="gypsum 74" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 75 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_75.jpg" alt="gypsum 75" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 76 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_76.jpg" alt="gypsum 76" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 77 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_77.jpg" alt="gypsum 77" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 78 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_78.jpg" alt="gypsum 78" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 79 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_79.jpg" alt="gypsum 79" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 80 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_80.jpg" alt="gypsum 80" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 80 si -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_80_si.jpg" alt="gypsum 80 si" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 81 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_81.jpg" alt="gypsum 81" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 82 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_82.jpg" alt="gypsum 82" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 83 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_83.jpg" alt="gypsum 83" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 84 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_84.jpg" alt="gypsum 84" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 85 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_85.jpg" alt="gypsum 85" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 86 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_86.jpg" alt="gypsum 86" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 87 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_87.jpg" alt="gypsum 87" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 88 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_88.jpg" alt="gypsum 88" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 89 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_89.jpg" alt="gypsum 89" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 90 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_90.jpg" alt="gypsum 90" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 91 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 flex items-center justify-center rounded-lg">
+                              <img src="img/gypsum_weekly/gypsum paper_billboard_91.jpg" alt="gypsum 91" class="rounded-lg shadow-lg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-2"></div>
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: full; overflow-y: none;">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Assort Art</h1>
+                        <div id="scroll-container" class="snap-x snap-mandatory overflow-x-auto overflow-y-none flex space-x-4 p-2 cursor-grab w-auto h-full" style="overflow-y: none;">
+                           <!-- Image 1 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/alone_in_frostbite.jpg" alt="assort 1" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/ancient_ones_broadcast_anim.gif" alt="assort 2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 3-->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/AO_helmet_collection_01.jpg" alt="assort 3" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 4-->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/BicBoiii_is_coming.jpg" alt="assort 4" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 5-->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/clan_wars_text.jpg" alt="assort 5" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 6-->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/confusion.jpg" alt="assort 6" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 7-->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/cs_logo_negative.webp" alt="assort 7" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 8-->
+                           <div class="snap-center flex-shrink-0 w-80 h-40  justify-center rounded-lg">
+                              <img src="img/assorted_art/cs_logo.webp" alt="assort 8" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 9 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/cuvys_book..webp" alt="assort 9" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 10 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/cuvys_speech.jpg" alt="assort 10" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 11 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/Default_futuristic_warrior_concept_art_realistic_8K_very_detai_0.jpg" alt="assort 11" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 12 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/Default_futuristic_warrior_concept_art_realistic_8K_very_detai_0_2.jpg" alt="assort 12" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 13 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/Default_futuristic_warrior_metal_armour_skull_like_metal_helme_1-enhanced.png" alt="assort 13" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 14 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/Default_futuristic_warrior_sci_fi_concept_art_1-enhanced.png" alt="assort 14" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 15 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/desert_ev.io.jpg" alt="assort 15" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 16 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/destroyer.jpg" alt="assort 16" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 17 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/Dr_Warren_03.jpg" alt="assort 17" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 18 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/Dr_Warren_05.jpg" alt="assort 18" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 19 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/enjine.jpg" alt="assort 19" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 20 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/fed.jpg" alt="assort 20" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 21 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/frost_bite_art.jpg" alt="assort 21" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 22 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/fugazis_atelier.jpg" alt="assort 22" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 23 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/gen.jpg" alt="assort 23" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 24 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/GW_funkymoves_01.jpg" alt="assort 24" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 25 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/GW_funkymoves_02.jpg" alt="assort 25" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 26 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/GW_funkymoves_03.jpg" alt="assort 26" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 27 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/gypsum_paper.jpg" alt="assort 27" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 28 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/just_keep_playing.jpg" alt="assort 28" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 29 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/kill_that_boss.jpg" alt="assort 29" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 30 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/lost_keys.jpg" alt="assort 30" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 31 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/nero.jpg" alt="assort 31" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 32 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/photorealistic_Izzy.jpg" alt="assort 32" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 33 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/radio_gypsum_animated.gif" alt="assort 33" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 34 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/RecklessBeta_homeworld.jpg" alt="assort 34" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 35 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/rumble_in_gypsum.jpg" alt="assort 35" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 36 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/SHAME.jpg" alt="assort 36" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 37 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/social_life.jpg" alt="assort 37" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 38 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/survival_mode_copy.jpg" alt="assort 38" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/survival_mode_II.jpg" alt="assort 39" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 40 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/tombstone_dance.jpg" alt="assort 40" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 41 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/tombs_trial_01.jpg" alt="assort 41" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 42 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/tombs_trial_02.jpg" alt="assort 42" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 43 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/veteran.jpg" alt="assort 43" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 44 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/visit_gypsum_01.jpg" alt="assort 44" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 45 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/visit_gypsum_02.jpg" alt="assort 45" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 46 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/we_thank_Deew.jpg" alt="assort 46" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 47 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/we_thank_T3000.jpg" alt="assort 47" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 48 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/we_thank_tomb.jpg" alt="assort 48" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 49 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/what_gain.jpg" alt="assort 49" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 50 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/zombies_hate_tombstone.jpg" alt="assort 50" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 51 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZOMBIE_FM.jpg" alt="assort 51" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 52 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/zombie_hunter.jpg" alt="assort 52" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 53 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/zombie_pay_homage.jpg" alt="assort 53" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 54 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/zombie_tv_3.jpg" alt="assort 54" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 55 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_01.jpg" alt="assort 55" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 56 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_02.jpg" alt="assort 56" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 57 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_03_a.jpg" alt="assort 57" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 58 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_03_b.jpg" alt="assort 58" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 59 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_03_c.jpg" alt="assort 59" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 60 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_03_d.jpg" alt="assort 60" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 61 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_ad_01.jpg" alt="assort 61" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 62 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/assorted_art/ZTV_anim.gif" alt="assort 62" class="rounded-lg shadow-lg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-2"></div>
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 h-auto hover:bg-neutral-900">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Player Cards</h1>
+                        <div id="scroll-container" class="snap-x snap-mandatory overflow-x-auto flex space-x-4 p-2 w-auto cursor-grab h-full" style="overflow-y: hidden;">
+                           <!-- Image 1 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/1_.jpg" alt="1" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Aotoki.jpg" alt="Aotoki" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 3 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Aussie_ev_pros_.jpg" alt="Aussie_ev_pros_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 4 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/BicBoiii.jpg" alt="BicBoiii" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 5 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/BlazerNinja.jpg" alt="BlazerNinja" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 6 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Bumsu.jpg" alt="Bumsu" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 7 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Bumsu_bot_killer.jpg" alt="Bumsu_bot_killer" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 8 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Chickpoint_Charlie.jpg" alt="Chickpoint_Charlie" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 9 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Chirps_.jpg" alt="Chirps_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 11 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/DRAGN.jpg" alt="DRAGN" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 12 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Enjine.jpg" alt="Enjine" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 13 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Fawn.jpg" alt="Fawn" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 14 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Greenacid_.jpg" alt="Greenacid_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 15 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/HAHA12345_.jpg" alt="HAHA12345_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 16 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Jade_warrior_.jpg" alt="Jade_warrior_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 17 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/KUTLU_trading_card.png" alt="KUTLU_trading_card" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 18 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Kilm_.jpg" alt="Kilm_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 19 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Kriptoz.jpg" alt="Kriptoz" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 20 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/LH05_.jpg" alt="LH05_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 21 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Lunat1c.jpg" alt="Lunat1c" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 22 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/McFaye.jpg" alt="McFaye" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 23 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Mikswin_.jpg" alt="Mikswin_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 24 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/MrPizzaMan.jpg" alt="MrPizzaMan" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 25 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/MrPizzaMan_.jpg" alt="MrPizzaMan_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 26 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/PHANTOM87_.jpg" alt="PHANTOM87_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 27 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/RecklessBeta_card_basic.jpg" alt="RecklessBeta_card_basic" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 28 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/RichClub.jpg" alt="RichClub" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 29 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Samslayer07.jpg" alt="Samslayer07" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 30 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/SooLeeQ_.jpg" alt="SooLeeQ_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 31 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/SooLeeQ_2.jpg" alt="SooLeeQ_2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 32 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/UltimateDefender_.jpg" alt="UltimateDefender_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 33 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Warren07.jpg" alt="Warren07" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 34 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Wolfmann_Games_trading_card.png" alt="Wolfmann_Games_trading_card" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 35 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/Yoogin_.jpg" alt="Yoogin_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 36 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/alguy_.jpg" alt="alguy_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 37 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/archery.jpg" alt="archery" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 38 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/bardock87.jpg" alt="bardock87" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 39 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/chop_chop.jpg" alt="chop_chop" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 40 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/coolbro.jpg" alt="coolbro" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 41 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/coolbro666_.jpg" alt="coolbro666_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 42 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/broken_img.png" alt="cromos ev io_II" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 43 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/deew024.jpg" alt="deew024" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 44 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/destroyer.jpg" alt="destroyer" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 45 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/dezs_.jpg" alt="dezs_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 46 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/eskezje_.jpg" alt="eskezje_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 47 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/fugazi.jpg" alt="fugazi" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 48 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/ghost_raptor_v2_.jpg" alt="ghost_raptor_v2_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 49 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/glitch.jpg" alt="glitch" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 50 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/green.jpg" alt="green" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 51 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/guest_.jpg" alt="guest_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 52 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/harsh24.jpg" alt="harsh24" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 53 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/harsh244.jpg" alt="harsh244" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 54 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/iminthebibleson.jpg" alt="iminthebibleson" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 55 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/iminthebibleson_.jpg" alt="iminthebibleson_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 56 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/inthedarkestime_.jpg" alt="inthedarkestime_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 57 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/izzigama-3.jpg" alt="izzigama-3" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 58 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/jony1.jpg" alt="jony1" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 59 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/jony1_ver2_.jpg" alt="jony1_ver2_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 60 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/k1koo.jpg" alt="k1koo" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 61 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/krunk_.jpg" alt="krunk_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 62 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/kryptor.jpg" alt="kryptor" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 63 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/leelee_.jpg" alt="leelee_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 64 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/lex1_.jpg" alt="lex1_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 65 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/lex1_champion.jpg" alt="lex1_champion" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 66 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/lunarninja.jpg" alt="lunarninja" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 67 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/markus_a.jpg" alt="markus_a" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 68 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/onex_.jpg" alt="onex_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 69 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/onex_ver_2_.jpg" alt="onex_ver_2_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 70 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/op_killer.jpg" alt="op_killer" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 71 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/opal_29_.jpg" alt="opal_29_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 72 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/oriongate_.jpg" alt="oriongate_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 73 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/raMarplayz.jpg" alt="raMarplayz" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 74 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/rektd.jpg" alt="rektd" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 75 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/sgt_walker_.jpg" alt="sgt_walker_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 76 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/slunas.jpg" alt="slunas" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 77 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/susano.jpg" alt="susano" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 78 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/tacopolice.jpg" alt="tacopolice" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 79 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/temo_.jpg" alt="temo_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 80 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/temo_2_.jpg" alt="temo_2_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 81 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/tkilla_.jpg" alt="tkilla_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 82 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/tombstone.jpg" alt="tombstone" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 83 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/turbo_.jpg" alt="turbo_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 84 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/x.jpg" alt="x" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 85 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/x.webp" alt="x" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 86 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/xenocial_.jpg" alt="xenocial_" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 87 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/game_cards/zephyr.jpg" alt="zephyr" class="rounded-lg shadow-lg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-2"></div>
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 hover:bg-neutral-900" style="height: auto; overflow-y: none;">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Clan Banners</h1>
+                        <div id="scroll-container" class="snap-x snap-mandatory overflow-x-auto flex space-x-4 p-2 w-auto h-auto cursor-grab" style="overflow-y: hidden;">
+                           <!-- Image 1 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/ADVENT_poster_4.jpg" alt="advent" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/ANCIENT_ONES_poster_.jpg" alt="ancient ones" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 3 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/ANCIENT_ONES_poster_ver_V.jpg" alt="ancient ones v2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 4 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/billboard_for_youtube_all.jpg" alt="youtubers" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 5 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/ETERNITY_poster_ver_2_CLEAN.jpg" alt="eternity v2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 6 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/NOVA_poster_flag_.jpg" alt="nova" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 7 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/banners/the_masters_banner_02.jpg" alt="the masters" class="rounded-lg shadow-lg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-2"></div>
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 overflow-y-none hover:bg-neutral-900" style="height: auto; overflow-y: none;">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Comics</h1>
+                        <div id="scroll-container" class="snap-x snap-mandatory overflow-x-auto overflow-y-none flex space-x-4 p-2 w-auto h-full cursor-grab" style="overflow-y: none;">
+                           <!-- Image 1 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/bic_bois_new_armour.jpg" alt="bicbois new armour" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 2 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/Tomb's day off_01.jpg" alt="Tomb's day off 01" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 3 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/Tomb's day off_02.jpg" alt="Tomb's day off 02" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 4 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/Tomb's day off_03.jpg" alt="Tomb's day off 03" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 5 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/Tomb's day off_04.jpg" alt="Tomb's day off 04" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 6 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/Tomb's nature 1.jpg" alt="Tomb's nature 1" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 7 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/Tomb's nature 2.jpg" alt="Tomb's nature 2" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 8 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_01.jpg" alt="not today 01" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 9 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_02.jpg" alt="not today 02" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 10 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_03.jpg" alt="not today 03" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 11 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_04.jpg" alt="not today 04" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 12 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_05.jpg" alt="not today 05" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 13 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_06.jpg" alt="not today 06" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 14 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_07.jpg" alt="not today 07" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 15 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/not today_08.jpg" alt="not today 08" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 16 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_00.jpg" alt="stranded 00" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 17 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_01.jpg" alt="stranded 01" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 18 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_02.jpg" alt="stranded 02" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 19 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_03.jpg" alt="stranded 03" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 20 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_04.jpg" alt="stranded 04" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 21 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_05.jpg" alt="stranded 05" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 22 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_06.jpg" alt="stranded 06" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 23 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_07.jpg" alt="stranded 07" class="rounded-lg shadow-lg">
+                           </div>
+                           <!-- Image 24 -->
+                           <div class="snap-center flex-shrink-0 w-80 h-40 justify-center rounded-lg">
+                              <img src="img/comics/stranded_cover.jpg" alt="stranded cover" class="rounded-lg shadow-lg">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="p-2"></div>
+                     <div class="backdrop-sepia-0 shadow-md shadow-[#7289da] rounded-lg p-2 overflow-y-none hover:bg-neutral-900" style="height: auto; overflow-y: none;">
+                        <h1 class="text-3xl font-bold mb-4 text-center">Musics</h1>
+                        <div class="grid grid-cols-3 grid-flow-rows gap-4 flex flex-col items-center justify-center">
+                           <div class="flex flex-col items-center justify-center">
+                              <p>Eternity Rises</p>
+                              <audio controls class="scale-[0.65] flex flex-col items-center justify-center">
+                                 <source src="img/music/Eternity_Rises.mp3" type="audio/mp3">
+                                 <source src="horse.mp3" type="audio/mpeg">
+                                 Your browser does not support the audio element.
+                              </audio>
+                           </div>
+                           <div class="flex flex-col items-center justify-center">
+                              <p>Evio Blues</p>
+                              <audio controls class="scale-[0.65] flex flex-col items-center justify-center">
+                                 <source src="img/music/Evio_Blues.mp3" type="audio/mp3">
+                                 Your browser does not support the audio element.
+                              </audio>
+                           </div>
+                           <div class="flex flex-col items-center justify-center">
+                              <p>Evio Drops the mic</p>
+                              <audio controls class="scale-[0.65] flex flex-col items-center justify-center">
+                                 <source src="img/music/Evio_drops_the_mic.mp3" type="audio/mp3">
+                                 Your browser does not support the audio element.
+                              </audio>
+                           </div>
+                           <div class="flex flex-col items-center justify-center">
+                              <p>Evios Grip</p>
+                              <audio controls class="scale-[0.65] flex flex-col items-center justify-center">
+                                 <source src="img/music/Evios_Grip.mp3" type="audio/mp3">
+                                 Your browser does not support the audio element.
+                              </audio>
+                           </div>
+                           <div class="flex flex-col items-center justify-center">
+                              <p>Neon Battlegrounds</p>
+                              <audio controls class="scale-[0.65] flex flex-col items-center justify-center">
+                                 <source src="img/music/Neon_Battlegrounds.mp3" type="audio/mp3">
+                                 Your browser does not support the audio element.
+                              </audio>
+                           </div>
+                           <div class="flex flex-col items-center justify-center">
+                              <p>The Ancient Ones</p>
+                              <audio controls class="scale-[0.65] flex flex-col items-center justify-center">
+                                 <source src="img/music/The_Ancient_Ones.mp3" type="audio/mp3">
+                                 Your browser does not support the audio element.
+                              </audio>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      <script src="main_functions/main.js"></script>
+   </body>
+</html>
