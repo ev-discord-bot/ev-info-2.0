@@ -1,22 +1,22 @@
 let icon = {
-   danger: '<i class="fa-solid fa-circle-exclamation"></i>'
+    danger: '<i class="fa-solid fa-circle-exclamation"></i>'
 };
 
 const showToast = (message = "Sample Message", toastType = "info", duration = 5000) => {
-   if (!Object.keys(icon).includes(toastType)) toastType = "info";
+    if (!Object.keys(icon).includes(toastType)) toastType = "info";
 
-   let box = document.createElement("div");
-   box.classList.add("toast", `toast-${toastType}`, "p-6", "rounded-lg", "shadow-lg", "shadow-[#7289da]", 'backdrop-sepia-0');
-   box.innerHTML = `<div class="toast-content-wrapper flex justify-between items-center"><div class="toast-icon p-1">${icon[toastType]}</div><div class="toast-message flex-1 text-base p-2">${message}</div><div class="toast-progress h-1 bg-gray-400"></div></div>`;
-   duration = duration || 5000;
-   box.querySelector(".toast-progress").style.animationDuration = `${duration / 5000}m`;
+    let box = document.createElement("div");
+    box.classList.add("toast", "text-neutral", "backdrop-brightness-50", `toast-${toastType}`, "p-6", "rounded-lg", "shadow-lg", "shadow-primary");
+    box.innerHTML = `<div class="flex justify-between items-center"><div class="toast-icon p-1">${icon[toastType]}</div><div class="toast-message flex-1 p-2">${message}</div><div class="toast-progress h-1"></div></div>`;
+    duration = duration || 5000;
+    box.querySelector(".toast-progress").style.animationDuration = `${duration / 5000}m`;
 
-   let toastAlready = document.body.querySelector(".toast");
-   if (toastAlready) {
-      toastAlready.remove();
-   }
+    let toastAlready = document.body.querySelector(".toast");
+    if (toastAlready) {
+        toastAlready.remove();
+    }
 
-   document.body.appendChild(box)
+    document.body.appendChild(box)
 };
 
 var isAudioPlaying = false;
@@ -28,23 +28,23 @@ function playAudio() {
         audioElement.play();
         isAudioPlaying = true;
         document.querySelector('.scrolling-text').style.pointerEvents = 'none';
-        audioElement.addEventListener('ended', function() {
+        audioElement.addEventListener('ended', function () {
             audioElement.pause();
             document.querySelector('.scrolling-text').style.pointerEvents = 'auto';
         });
-        document.querySelector('#logo-image').addEventListener('click', function() {
+        document.querySelector('#logo-image').addEventListener('click', function () {
             isAudioPlaying = false;
         });
     }
 }
 
-function openNav() {document.getElementById("myNav").style.height = "100%";}
-function closeNav() {document.getElementById("myNav").style.height = "0%";}
+function openNav() { document.getElementById("myNav").style.height = "100%"; }
+function closeNav() { document.getElementById("myNav").style.height = "0%"; }
 
 
-function hoverIcon(element) {element.querySelector('i').classList.add('fa-shake');}
-function resetIcon(element) {element.querySelector('i').classList.remove('fa-shake');}
-function PlayButton() {var audio = new Audio('img/button_click.mp3'); audio.volume = 0.05; audio.play();}
+function hoverIcon(element) { element.querySelector('i').classList.add('fa-shake'); }
+function resetIcon(element) { element.querySelector('i').classList.remove('fa-shake'); }
+function PlayButton() { var audio = new Audio('img/button_click.mp3'); audio.volume = 0.05; audio.play(); }
 
 
 
@@ -81,15 +81,3 @@ containers.forEach(container => {
         container.scrollLeft = scrollLeft - walk;
     });
 });
-
-function truncateText(selector, maxLength) {
-    const element = document.querySelector(selector);
-    const text = element.textContent;
-
-    if (text.length > maxLength) {
-      element.textContent = text.substring(0, maxLength) + '...';
-    }
-  }
-
-  truncateText('#truncate-js', 100); // Truncate to 50 characters
-

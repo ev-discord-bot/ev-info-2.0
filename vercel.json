@@ -1,0 +1,15 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/docs", "destination": "/docs.html" },
+      { "source": "/gallery", "destination": "/gallery.html" },
+      { "source": "/uisettings", "destination": "/uisettings.html" },
+      { "source": "/crosshairs", "destination": "/crosshairs.html" }
+    ],
+    "redirects": [
+      { "source": "/404", "destination": "/404.html", "statusCode": 404 }
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
+  }
+  

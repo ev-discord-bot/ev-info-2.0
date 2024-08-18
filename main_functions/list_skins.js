@@ -91,14 +91,14 @@ async function displayUserNFTs(currentPage = 1) {
                 if (page <= 2 || page >= totalPages - 1 || Math.abs(page - currentPage) <= 1) {
                     const pageButton = document.createElement('button');
                     pageButton.textContent = page;
-                    pageButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-[#7289da]', 'rounded-lg', 'normal-case', 'scale-[0.75]');
+                    pageButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-primary', 'rounded-lg', 'normal-case', 'scale-[0.75]');
                     pageButton.onclick = () => displayUserNFTs(page);
                     pageButtons.push(pageButton);
                     displayedPages.push(page);
                 } else if (!displayedPages.includes('...')) {
                     const ellipsisButton = document.createElement('button');
                     ellipsisButton.textContent = '...';
-                    ellipsisButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-[#7289da]', 'rounded-lg', 'normal-case', 'scale-[0.75]');
+                    ellipsisButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-primary', 'rounded-lg', 'normal-case', 'scale-[0.75]');
                     ellipsisButton.onclick = () => replaceEllipsisWithInputField(ellipsisButton, currentPage, totalPages);
                     pageButtons.push(ellipsisButton);
                     displayedPages.push('...');
@@ -108,7 +108,7 @@ async function displayUserNFTs(currentPage = 1) {
             if (!displayedPages.includes(totalPages - 1)) {
                 const pageButton = document.createElement('button');
                 pageButton.textContent = totalPages - 1;
-                pageButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-[#7289da]', 'rounded-lg', 'normal-case');
+                pageButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-primary', 'rounded-lg', 'normal-case');
                 pageButton.onclick = () => displayUserNFTs(totalPages - 1);
                 pageButtons.push(pageButton);
             }
@@ -116,7 +116,7 @@ async function displayUserNFTs(currentPage = 1) {
             if (!displayedPages.includes(totalPages)) {
                 const pageButton = document.createElement('button');
                 pageButton.textContent = totalPages;
-                pageButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-[#7289da]', 'rounded-lg', 'normal-case');
+                pageButton.classList.add('mx-1', 'btn', 'backdrop-sepia-0', 'shadow-md', 'shadow-primary', 'rounded-lg', 'normal-case');
                 pageButton.onclick = () => displayUserNFTs(totalPages);
                 pageButtons.push(pageButton);
             }
@@ -140,7 +140,7 @@ function replaceEllipsisWithInputField(ellipsisButton, currentPage, totalPages) 
     inputField.min = 1;
     inputField.max = totalPages;
     inputField.value = currentPage;
-    inputField.classList.add('mx-1', 'backdrop-sepia-0', 'shadow-md', 'shadow-[#7289da]', 'rounded-lg', 'normal-case', "text-center", "justify-center", "items-center", 'scale-[0.75]');
+    inputField.classList.add('mx-1', 'backdrop-sepia-0', 'shadow-md', 'shadow-primary', 'rounded-lg', 'normal-case', "text-center", "justify-center", "items-center", 'scale-[0.75]');
     inputField.style.width = '3rem';
     inputField.style.height = '35px';
     inputField.style.textAlign = 'center';
@@ -189,7 +189,7 @@ async function displayPageNFTs(paginatedNFTs, currentPage, totalPages) {
 
                 const skinInfo = document.createElement('div');
                 skinInfo.classList.add('skin-info');
-                skinInfo.innerHTML = `<div class="flex flex-col items-center justify-center backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg h-[200px]"><img src="${imageUrl}" alt="NFT Image" class="h-[100px] w-auto rounded-lg items-center"><div class="scale-[0.75]"><div class="text-center"><strong>Name:</strong>${nftData.field_skin || 'Unknown'}</div><div class="text-center"><strong>NFT Token:</strong><a target="_blank" href="https://solscan.io/token/${nftData.field_flag_nft_address}">${truncateToken(nftData.field_flag_nft_address) || 'Unknown'}</a></div></div></div>`;
+                skinInfo.innerHTML = `<div class="flex flex-col items-center justify-center backdrop-sepia-0 shadow-lg shadow-primary rounded-lg h-[200px]"><img src="${imageUrl}" alt="NFT Image" class="h-[100px] w-auto rounded-lg items-center"><div class="scale-[0.75]"><div class="text-center"><strong>Name:</strong>${nftData.field_skin || 'Unknown'}</div><div class="text-center"><strong>NFT Token:</strong><a target="_blank" href="https://solscan.io/token/${nftData.field_flag_nft_address}">${truncateToken(nftData.field_flag_nft_address) || 'Unknown'}</a></div></div></div>`;
 
                 skinInfoBox.appendChild(skinInfo);
                 nftCard.appendChild(skinInfoBox);
@@ -215,7 +215,7 @@ async function displayPageNFTs(paginatedNFTs, currentPage, totalPages) {
                     skinInfo.classList.add('skin-info');
                     skinInfo.innerHTML = `
 
-                   <div class="flex flex-col items-center justify-center backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg h-[200px] ">
+                   <div class="flex flex-col items-center justify-center backdrop-sepia-0 shadow-lg shadow-primary rounded-lg h-[200px] ">
                      <div class="scale-[0.75]">
                        <img src="${imageUrl}" class="max-h-40 max-w-40 rounded-lg mb-4">
                        <div class="text-center"><strong>Node ID:</strong> ${nftData.entity_id || 'Unknown'}</div>

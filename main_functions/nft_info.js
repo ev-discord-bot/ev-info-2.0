@@ -69,7 +69,7 @@ function searchNFT() {
 
            infoContainer.appendChild(thumbnailImage);
            const uidUrl = `https://ev.io/node/${game_node_id}`;
-           infoContainer.innerHTML += `<div class="flex flex-col justify-center items-center backdrop-sepia-0 shadow-lg shadow-[#7289da] rounded-lg p-4 scale-[0.8]"><img src="${thumbnail}" class="max-h-40 max-w-40 rounded-lg mb-4"><p class="text-center"><strong>Skin Name:</strong> ${skin_name}</p><p class="text-center"><strong>Game Node URL:</strong><a href="${uidUrl}" target="_blank"> ${uidUrl}</a></p><p class="text-center"><strong>Weapon Type:</strong> ${weapon_type}</p><p class="text-center"><strong>Reset Time:</strong> ${reset_time}</p><p class="text-center"><strong>Collection:</strong> ${collection}</p></div>`;
+           infoContainer.innerHTML += `<div class="flex flex-col justify-center items-center backdrop-sepia-0 shadow-lg shadow-primary rounded-lg p-4 scale-[0.8]"><img src="${thumbnail}" class="max-h-40 max-w-40 rounded-lg mb-4"><p class="text-center"><strong>Skin Name:</strong> ${skin_name}</p><p class="text-center"><strong>Game Node URL:</strong><a href="${uidUrl}" target="_blank"> ${uidUrl}</a></p><p class="text-center"><strong>Weapon Type:</strong> ${weapon_type}</p><p class="text-center"><strong>Reset Time:</strong> ${reset_time}</p><p class="text-center"><strong>Collection:</strong> ${collection}</p></div>`;
 
            outputDiv.appendChild(infoContainer);
        })

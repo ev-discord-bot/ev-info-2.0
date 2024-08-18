@@ -181,25 +181,3 @@ document.addEventListener("DOMContentLoaded", () => {
    });
 });
 
-const notificationButton = document.getElementById('notificationButton');
-const popup = document.getElementById('popup');
-const closeButton = document.getElementById('closeButton');
-
-function showPopup() {
-   popup.classList.remove('hidden')
-}
-
-function hidePopup() {
-   popup.classList.add('hidden');
-}
-
-function togglePopup() {
-   popup.classList.toggle('hidden');
-}
-notificationButton.addEventListener('click', togglePopup);
-closeButton.addEventListener('click', hidePopup);
-document.addEventListener('click', function(event) {
-   if (!notificationButton.contains(event.target) && !popup.contains(event.target)) {
-       hidePopup();
-   }
-});
