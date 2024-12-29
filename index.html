@@ -868,8 +868,7 @@
                                                 <p class="text-center">For Users that have android phones well your in luck, i have created an (android only) app that allows you too!</p>
                                              </div>
 
-                                                <button class="flex items-center justify-center btn btn-primary" href="src/evinfo_release.apk" download="evinfo_release.apk">Download button</button>
-                                          <!-- End Update Item -->
+                                             <button class="flex items-center justify-center btn btn-primary" onclick="downloadFile()">Download</button>                                             <!-- End Update Item -->
                                           
                                     </div>
                                  </div>
@@ -1303,5 +1302,13 @@
       <script src="main_functions/listskins.js"></script>
       <script src="main_functions/clanlists.js"></script>
       <script src="main_functions/fun things/confetti.js"></script>
+      <script>
+         function downloadFile() {
+             const link = document.createElement('a');
+             link.href = 'src/evinfo_release.apk';
+             link.download = 'evinfo_release.apk';
+             link.click();
+         }
+      </script>
    </body>
 </html>
